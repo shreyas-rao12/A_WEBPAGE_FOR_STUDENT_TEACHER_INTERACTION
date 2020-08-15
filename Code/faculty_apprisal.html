@@ -1,0 +1,2386 @@
+<html>
+<H1 align="center">FACUTY APPRISAL</H1>
+   <head>
+      <title>APPRAISAL</title>
+	  <style>
+
+::selection{
+	background:none;
+}
+
+body{
+	background:#595959;
+	font-family: 'Roboto';
+	font-weight:500;
+	text-transform: uppercase;
+	color: #ffffff;
+	height:100%;
+}
+
+.continput {
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 250px;
+	height: 270px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	width: 220px;
+	margin: auto;
+}
+
+li {
+	position: relative;
+	padding: 10px;
+	padding-left: 40px;
+	height:30px;
+}
+
+label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    left: 7px;
+		top: calc(50% - 13px);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+input[type="radio"] {
+	opacity: 0;
+	-webkit-appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+  width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 15px);
+	cursor: pointer;
+}
+
+.bullet {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: -3px;
+    top: 2px;
+    border: 5px solid #fff;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked ~ .bullet {
+	position:absolute;
+	opacity: 1;
+	animation-name: explode;
+	animation-duration: 0.350s;
+}
+
+.line {
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background-color: #fff;
+	opacity:0;
+}
+
+.line.zero {
+	left: 11px;
+	top: -21px;
+	transform: translateY(20px);
+	width: 2px;
+	height: 10px;
+}
+
+.line.one {
+	right: -7px;
+	top: -11px;
+	transform: rotate(-55deg) translate(-9px);
+}
+
+.line.two {
+	right: -20px;
+	top: 11px;
+	transform: translate(-9px);
+}
+
+.line.three {
+	right: -8px;
+	top: 35px;
+	transform: rotate(55deg) translate(-9px);
+}
+
+.line.four {
+	left: -8px;
+	top: -11px;
+	transform: rotate(55deg) translate(9px);
+}
+
+.line.five {
+	left: -20px;
+	top: 11px;
+	transform: translate(9px);
+}
+
+.line.six {
+	left: -8px;
+	top: 35px;
+	transform: rotate(-55deg) translate(9px);
+}
+
+.line.seven {
+	left: 11px;
+	bottom: -21px;
+	transform: translateY(-20px);
+	width: 2px;
+	height: 10px;
+}
+
+input[type="radio"]:checked ~ .bullet .line.zero{
+	animation-name:drop-zero;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.one{
+	animation-name:drop-one;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.two{
+	animation-name:drop-two;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.three{
+	animation-name:drop-three;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.four{
+	animation-name:drop-four;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.five{
+	animation-name:drop-five;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.six{
+	animation-name:drop-six;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+input[type="radio"]:checked ~ .bullet .line.seven{
+	animation-name:drop-seven;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes explode {
+	0%{
+		opacity: 0;
+		transform: scale(10);
+	}
+	60%{
+		opacity: 1;
+		transform: scale(0.5);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes drop-zero {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+		height: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translateY(-2px);
+		height: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-one {
+	0% {
+		opacity: 0;
+		transform: rotate(-55deg) translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(-55deg) translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-two {
+	0% {
+		opacity: 0;
+		transform: translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-three {
+	0% {
+		opacity: 0;
+		transform: rotate(55deg) translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(55deg) translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-four {
+	0% {
+		opacity: 0;
+		transform: rotate(55deg) translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(55deg) translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-five {
+	0% {
+		opacity: 0;
+		transform: translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-six {
+	0% {
+		opacity: 0;
+		transform: rotate(-55deg) translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(-55deg) translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+
+@keyframes drop-seven {
+0% {
+		opacity: 0;
+		transform: translateY(-20px);
+		height: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translateY(2px);
+		height: 0px;
+		opacity:0;
+	}
+}
+
+	  </style>
+   </head>
+
+   <body bgcolor="Silver">
+      <table border = "1" cellpadding = "5" cellspacing = "5" style="border-collapse:collapse">
+         <tr>
+            <th>NAME</th>
+            <th>TEACHING</th>
+			<th>TIME MANAGEMENT</th>
+			<th>EVALUATION</th>
+			<th>OVERALL</th>
+			<th>ANY FEEDBACKS</th>
+
+         </tr>
+		 <!--for 1st lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture 1</h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 1st lec-->
+		 		 <!--for 2nd lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture 2</h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 2nd lec-->
+		 		 <!--for 3rd lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture 3</h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 3rd lec-->
+		 		 <!--for 4th lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture 4</h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 4th lec-->
+		 		 <!--for 5th lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture5 </h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 5th lec-->
+		 		 <!--for 6th lec-->
+         <tr>
+            <td><figure>
+				<img src="images/lec.png" alt="lecture1" height="80" width="120">
+				<figcaption align="center"><h3>lecture 6</h3></figcaption>
+				</figure>
+			</td>
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="1">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="1">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="1">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="2">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="2">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="2">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="3">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="3">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="3">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="3">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+
+
+            <td><form class="continput">
+	<ul>
+		<li>
+			<input type="radio" name="4">
+			<label>EXCELLENT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>GOOD</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="4">
+			<label>AVERAGE</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+		<li>
+			<input type="radio" name="4">
+			<label>POOR</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="4">
+			<label>WORST</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+	</ul>
+</form>
+</td>
+			<td>
+				<form action="">
+					 <textarea rows = "12" cols = "30" name = "feedback">
+					 </textarea><br>
+				  <input type="reset">
+				</form>
+			</td>
+
+         </tr>
+		 <!--for 6th lec-->
+
+	  </table>
+<button style = "float:right" onclick = "alert('Feedback submitted Successfully!!'); window.close()">SUBMIT</button>
+   </body>
+
+</html>
